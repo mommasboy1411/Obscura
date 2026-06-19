@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKINGS & PRESS | OBSCURA NTOKEYSA</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="grid-container">
+        
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home (The Portal)</a></li>
+                    <li><a href="vault.html">The Vault</a></li>
+                    <li><a href="gallery.html">Media Gallery</a></li>
+                    <li><a href="booking.html">Booking and press (EPK)</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <hr>
+
+        <main>
+            <h1>Booking and Press Portal</h1>
+            <p>For festival performance bookings, creative visual collaborations, and international scheduling inquiries.</p>
+            
+            <hr>
+        
+            <h2>Electronic Press Kit (EPK)</h2>
+            <p>Access the formal visual guidelines and brand biographies below:</p>
+            <a href="../Assets/NtokeySA_Official_EPK_2026.pdf" download="NtokeySA_Official_EPK_2026.pdf">
+                <button type="button">Download Press Kit Portfolio (PDF)</button>
+            </a>
+            
+            <hr>
+
+            <h2>Secure a Live Performance Block</h2>
+            <p>Direct Agency Contact Path: 
+                <a href="mailto:bookingobscura@gmail.com">bookingobscura@gmail.com</a>
+            </p>
+            
+            <div class="booking-form-wrapper">
+                
+                <div id="validation-feedback-container" style="display: none;"></div>
+
+                <form id="portal-booking-form">
+                    <div class="form-group">
+                        <label for="input-promoter">Promoter / Venue Agency Identity Name:</label>
+                        <input type="text" id="input-promoter" placeholder="e.g., Carfax Johannesburg">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-email">Secure Communication Email Address:</label>
+                        <input type="email" id="input-email" placeholder="agency@domain.co.za">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="select-category">Performance Structure Variant Selection:</label>
+                        <select id="select-category">
+                            <option value="">-- Click to Expand Variants --</option>
+                            <option value="club">Club Performance Set</option>
+                            <option value="festival">Festival Main Stage Set</option>
+                            <option value="corporate">Private Studio Assembly Placement</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="textarea-specs">Event Technical Specifications & Date Guidelines:</label>
+                        <textarea id="textarea-specs" rows="6" placeholder="Outline sound monitoring setup, date parameters, and location details..."></textarea>
+                    </div>
+
+                    <button type="submit">Transmit Specification Request</button>
+                </form>
+            </div>
+        </main>
+
+        <hr>
+        
+        <footer>
+            <ul>
+                <li><a href="https://www.instagram.com/ntokey.sa?utm_source=qr&igsh=cWZnOWF4b2RlbjBt" target="_blank">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@ntokochi?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a></li>
+                <li><a href="https://soundcloud.com/ntokeysa?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank">SoundCloud</a></li>
+            </ul>
+
+            <audio controls id="global-player">
+                <source src="../Assets/Obscura.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+          
+            <p id="current-track-display"><strong>Now Playing:</strong> Obscura</p>
+            <p>&copy; 2026 OBSCURA | NTOKEYSA. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

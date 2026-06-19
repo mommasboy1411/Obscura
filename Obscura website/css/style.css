@@ -1,0 +1,365 @@
+/**
+ * OBSCURA Central Design Identity & Presentation Architecture
+ * Engineered for Strict Part 3 Typography, Grid Layouts, & Responsiveness
+ */
+
+:root {
+    --bg-main: #000000;             /* Premium deep base pitch black background */
+    --accent-maroon: #800000;        /* Official structural wine red layout lines */
+    --highlight-crimson: #dc143c;    /* Interactive pulse red focus transitions */
+    --text-offwhite: #f5f5f5;       /* Relaxed high-contrast text layout choice */
+    --main-font: 'Courier New', Courier, monospace; /* Industrial aesthetic typography */
+}
+
+/* Base Universal Structural Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-offwhite);
+    font-family: var(--main-font);
+    line-height: 1.8; /* Balanced line-height configuration to stop eye strain */
+    padding: 40px 20px;
+    letter-spacing: 0.5px;
+}
+
+/* 12-Column Spatial Grid Engine Layout Framework */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 35px; /* Clean column separation gutters */
+    max-width: 1100px; /* Tightly structured outer container bounds */
+    margin: 0 auto; /* Perfect desktop center alignment */
+}
+
+header, main, footer {
+    grid-column: span 12;
+}
+
+header {
+    padding-bottom: 10px;
+}
+
+footer {
+    padding-top: 40px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+/* Semantic Typography Definitions */
+h1 {
+    font-size: 2.6rem;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    color: var(--text-offwhite);
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.35rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent-maroon);
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-offwhite);
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 0.95rem;
+    color: var(--text-offwhite);
+    margin-bottom: 20px; /* Controls typography layout flow tracking */
+    max-width: 85ch; /* Keeps text lines from expanding too wide on desktop layout views */
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--accent-maroon);
+    margin: 35px 0;
+    width: 100%;
+}
+
+/* Core Navigation Matrices */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Prevents overflow clipping on smaller displays */
+    gap: 25px;
+}
+
+nav ul li a {
+    color: var(--text-offwhite);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: var(--accent-maroon);
+}
+
+nav ul li a:focus {
+    outline: 1px dashed var(--highlight-crimson);
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+footer ul li a {
+    color: var(--text-offwhite);
+    text-decoration: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: var(--accent-maroon);
+}
+
+/* Interactive Action Form Components & Controls */
+button, .btn-action {
+    background-color: transparent;
+    color: var(--text-offwhite);
+    border: 1px solid var(--accent-maroon);
+    padding: 14px 32px;
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin: 15px 0;
+    display: inline-block;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover, .btn-action:hover {
+    background-color: var(--highlight-crimson);
+    border-color: var(--highlight-crimson);
+    color: #ffffff;
+}
+
+button:focus {
+    outline: 2px solid var(--highlight-crimson);
+}
+
+/* Interactive Layout Lists & Anchors */
+ul.vault-list {
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+ul.vault-list li {
+    margin-bottom: 15px;
+}
+
+.track-select-link {
+    color: var(--highlight-crimson);
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.track-select-link:hover {
+    color: var(--text-offwhite);
+}
+
+/* Media Graphic Components */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--accent-maroon);
+    filter: grayscale(100%);
+    margin: 20px 0;
+}
+
+figcaption {
+    font-size: 0.75rem;
+    color: var(--text-offwhite);
+    margin-top: 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+audio {
+    width: 100%;
+    max-width: 400px;
+    margin: 25px auto;
+    display: block;
+    filter: invert(100%) hue-rotate(140deg); /* Custom native component matrix overlay mapping */
+}
+
+/* Tabular Architecture Matrix Layout Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+th, td {
+    border: 1px solid var(--accent-maroon);
+    padding: 14px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+th {
+    background-color: #0d0d0d;
+    color: var(--text-offwhite);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Interactive Form Containers */
+.booking-form-wrapper {
+    background-color: #050505;
+    border: 1px solid var(--accent-maroon);
+    padding: 30px;
+    margin: 30px 0;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: var(--text-offwhite);
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    background-color: #000000;
+    color: var(--text-offwhite);
+    border: 1px solid var(--accent-maroon);
+    font-family: var(--main-font);
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--highlight-crimson);
+}
+
+/* JavaScript Pipeline Dynamic Feedback Notification System Toast Box */
+.feedback-message {
+    padding: 18px;
+    margin-bottom: 25px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.msg-success {
+    background-color: #000000;
+    border: 1px solid var(--highlight-crimson);
+    color: var(--text-offwhite);
+}
+
+.msg-error {
+    background-color: #200000;
+    border: 1px solid var(--highlight-crimson);
+    color: #ffffff;
+}
+
+/* ==========================================
+   VIEWPORT RESPONSIVENESS AND TABLET BREAKDOWNS
+   ========================================== */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 2.1rem;
+        letter-spacing: 4px;
+    }
+
+    .grid-container {
+        gap: 20px;
+    }
+
+    .booking-form-wrapper {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .grid-container {
+        display: block; /* Unhinges multi-column layouts safely to clear vertical squishing */
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    footer ul {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block; /* Reformats table vectors natively for clear card layout mobile viewports */
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid var(--accent-maroon);
+        margin-bottom: 15px;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #111111;
+        position: relative;
+        padding-left: 45%;
+    }
+
+    td:last-child {
+        border-bottom: none;
+    }
+}
